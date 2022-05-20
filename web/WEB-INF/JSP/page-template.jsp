@@ -22,7 +22,7 @@
                 <h1>Blog name</h1>
             </div>
             <div class="large-6 medium-6 columns">
-                <form action="/search" method="get">
+                <form action="search" method="get">
                     <div class="input-group" style="margin-top: 1em;">
                         <input id="search" class="input-group-field" name="query" placeholder="Search query"
                                type="text">
@@ -47,25 +47,25 @@
                 <a href="javascript:void(0);">Categories</a>
                 <ul class="menu" style="display:none;">
                     <li>
-                        <a href="/news">Elementum<span>(1)</span></a>
+                        <a href="news">Elementum<span>(1)</span></a>
                     </li>
                     <li>
-                        <a href="/news">Proin<span>(2)</span></a>
+                        <a href="news">Proin<span>(2)</span></a>
                     </li>
                     <li>
-                        <a href="/news">Eleifend<span>(18)</span></a>
+                        <a href="news">Eleifend<span>(18)</span></a>
                     </li>
                     <li>
-                        <a href="/news">Phasellus<span>(24)</span></a>
+                        <a href="news">Phasellus<span>(24)</span></a>
                     </li>
                     <li>
-                        <a href="/news">Consectetuer<span>(33)</span></a>
+                        <a href="news">Consectetuer<span>(33)</span></a>
                     </li>
                     <li>
-                        <a href="/news">Ultricies<span>(2)</span></a>
+                        <a href="news">Ultricies<span>(2)</span></a>
                     </li>
                     <li>
-                        <a href="/news">Mollis<span>(1)</span></a>
+                        <a href="news">Mollis<span>(1)</span></a>
                     </li>
                 </ul>
             </li>
@@ -85,37 +85,37 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Elementum<span>(1)</span></a>
+                        <a href="news">Elementum<span>(1)</span></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Proin<span>(2)</span></a>
+                        <a href="news">Proin<span>(2)</span></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Eleifend<span>(18)</span></a>
+                        <a href="news">Eleifend<span>(18)</span></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Phasellus<span>(24)</span></a>
+                        <a href="news">Phasellus<span>(24)</span></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Consectetuer<span>(33)</span></a>
+                        <a href="news">Consectetuer<span>(33)</span></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Ultricies<span>(2)</span></a>
+                        <a href="news">Ultricies<span>(2)</span></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/news">Mollis<span>(1)</span></a>
+                        <a href="news">Mollis<span>(1)</span></a>
                     </td>
                 </tr>
                 </tbody>
@@ -128,10 +128,10 @@
         <div class="small-12 medium-6 large-5 columns">
             <p class="logo"><i class="fi-shield"></i>PERSONAL BLOG</p>
             <p class="footer-links">
-                <a href="/news">News</a>
-                <a href="/search">Search</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+                <a href="news">News</a>
+                <a href="search">Search</a>
+                <a href="about">About</a>
+                <a href="contact">Contact</a>
             </p>
             <p class="copywrite">Copywrite not copywrite © 2015</p>
         </div>
