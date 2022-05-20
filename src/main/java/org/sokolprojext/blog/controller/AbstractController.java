@@ -16,6 +16,7 @@ public abstract class AbstractController extends HttpServlet {
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
     public final void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("currentPage", "page/" + jspPage);
+        System.out.println(">>> redirect to " + req.getAttribute("currentPage"));
         req.getRequestDispatcher("/WEB-INF/JSP/page-template.jsp").forward(req,resp);
     }
 

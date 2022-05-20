@@ -2,10 +2,10 @@
 
 
 <div class="article thumbnail">
-    <a href="article.html"><img src="http://placehold.it/1000x400"
+    <a href="/article"><img src="http://placehold.it/1000x400"
                                 alt="Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem."></a>
     <div class="data">
-        <h3><a href="article.html">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</a></h3>
+        <h3><a href="/article">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</a></h3>
         <ul class="vertical large-horizontal menu">
             <li><i class="fi-folder"></i><a href="#">Phasellus</a></li>
             <li><i class="fi-comments"></i>14 comments</li>
@@ -20,9 +20,9 @@
     </div>
 </div>
 <div class="article thumbnail">
-    <a href="article.html"><img src="http://placehold.it/1000x400" alt="Donec venenatis vulputate lorem."></a>
+    <a href="/article"><img src="http://placehold.it/1000x400" alt="Donec venenatis vulputate lorem."></a>
     <div class="data">
-        <h3><a href="article.html">Donec venenatis vulputate lorem.</a></h3>
+        <h3><a href="/article">Donec venenatis vulputate lorem.</a></h3>
         <ul class="vertical large-horizontal menu">
             <li><i class="fi-folder"></i><a href="#">Cubilia</a></li>
             <li><i class="fi-comments"></i>10 comments</li>
@@ -36,10 +36,10 @@
     </div>
 </div>
 <div class="article thumbnail">
-    <a href="article.html"><img src="http://placehold.it/1000x400"
+    <a href="/article"><img src="http://placehold.it/1000x400"
                                 alt="Praesent ac massa at ligula laoreet iaculis."></a>
     <div class="data">
-        <h3><a href="article.html">Praesent ac massa at ligula laoreet iaculis.</a></h3>
+        <h3><a href="/article">Praesent ac massa at ligula laoreet iaculis.</a></h3>
         <ul class="vertical large-horizontal menu">
             <li><i class="fi-folder"></i><a href="#">Phasellus</a></li>
             <li><i class="fi-comments"></i>8 comments</li>

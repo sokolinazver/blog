@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
 <build>
-    <finalName>ROOT</finalName>
+    <finalName>SOKOLBLOG</finalName>
     <pluginManagement>
         <plugins>
             <plugin>
