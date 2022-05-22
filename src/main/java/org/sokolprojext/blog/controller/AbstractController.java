@@ -2,6 +2,8 @@ package org.sokolprojext.blog.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.sokolprojext.blog.service.BusinessService;
+import org.sokolprojext.blog.service.impl.ServiceManager;
 
 
 import javax.servlet.ServletException;
@@ -14,6 +16,17 @@ import java.io.IOException;
 public abstract class AbstractController extends HttpServlet {
 
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
+    private BusinessService businessService;
+
+    public final BusinessService getBusinessService() {
+        return businessService;
+    }
+
+    @Override
+    public void init() throws ServletException {
+       businessService = ServiceManager.getInstance(getServletContext()).getBusinessService();
+    }
+
     public final void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("currentPage", "page/" + jspPage);
         System.out.println(">>> redirect to " + req.getAttribute("currentPage"));
