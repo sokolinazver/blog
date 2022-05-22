@@ -14,6 +14,7 @@ public class ApplicationListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		LOGGER.info(">> Application started");
+		System.out.println(">>>> application STARTED LISTENER");
 	}
 
 	@Override
