@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="static/css/foundation.css">
-    <link rel="stylesheet" type="text/css"
-          href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="static/css/foundation-icons.css">
     <link rel="stylesheet" type="text/css" href="static/css/app.css">
 </head>
 <body>

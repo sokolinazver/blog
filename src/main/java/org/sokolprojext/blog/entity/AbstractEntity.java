@@ -6,7 +6,7 @@ import org.sokolprojext.blog.model.AbstractModel;
 
 import java.io.Serializable;
 
-public class AbstractEntity<PK> extends AbstractModel implements Serializable {
+public abstract class AbstractEntity<PK> extends AbstractModel implements Serializable {
     private PK id;
 
     public PK getId() {
