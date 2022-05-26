@@ -14,6 +14,7 @@ public class Article extends AbstractEntity<Long>{
     private int idCategory;
     private Timestamp created;
     private long views;
+    private int comments;
 
     public String getArticleLink(){
         return "/article/"+getId()+url;
@@ -100,5 +101,5 @@ public class Article extends AbstractEntity<Long>{
         this.comments = comments;
     }
 
-    private int comments;
+
 }

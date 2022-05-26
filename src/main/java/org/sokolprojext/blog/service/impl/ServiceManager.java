@@ -12,6 +12,13 @@ import java.util.Properties;
 
 public class ServiceManager {
 
+    private static final String SERVICE_MANAGER = "SERVICE_MANAGER";
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceManager.class);
+
+    final Properties applicationProperties = new Properties();
+    final BusinessService businessService;
+    final BasicDataSource dataSource;
+
     public static ServiceManager getInstance(ServletContext context) {
         ServiceManager instance = (ServiceManager) context.getAttribute(SERVICE_MANAGER);
         if (instance == null) {
@@ -37,12 +44,6 @@ public String getApplicationProperty(String property){
         return applicationProperties.getProperty(property);
 }
 
-    private static final String SERVICE_MANAGER = "SERVICE_MANAGER";
-    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceManager.class);
-
-    final Properties applicationProperties = new Properties();
-    final BusinessService businessService;
-    final BasicDataSource dataSource;
 
     private ServiceManager(ServletContext context){
         AppUtil.loadProperties(applicationProperties,"application.properties");

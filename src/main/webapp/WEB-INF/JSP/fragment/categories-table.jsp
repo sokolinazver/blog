@@ -8,7 +8,7 @@
         <c:set var="cat" value="${categoryEntry.value}"/>
         <tr>
             <td class="item">
-                <a href="news${cat.url}">${cat.name}<span>(${cat.articles })</span></a>
+                <a href="/news${cat.url}">${cat.name}<span>(${cat.articles })</span></a>
             </td>
         </tr>
     </c:forEach>
