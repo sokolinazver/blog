@@ -54,7 +54,7 @@ public String getApplicationProperty(String property){
 
     private BasicDataSource createBasicDataSource(){
         BasicDataSource ds = new BasicDataSource();
-        ds.setDefaultAutoCommit(true);
+        ds.setDefaultAutoCommit(false);
         ds.setRollbackOnReturn(true);
         ds.setDriverClassName(getApplicationProperty("db.driver"));
         ds.setUrl(getApplicationProperty("db.url"));

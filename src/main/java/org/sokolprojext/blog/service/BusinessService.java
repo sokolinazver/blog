@@ -2,6 +2,7 @@ package org.sokolprojext.blog.service;
 
 import org.sokolprojext.blog.entity.Article;
 import org.sokolprojext.blog.entity.Category;
+import org.sokolprojext.blog.exception.RedirectToValidUrlException;
 import org.sokolprojext.blog.model.Items;
 
 import java.util.Map;
@@ -15,4 +16,6 @@ public interface BusinessService {
     Category findCategoryByUrl(String categoryUrl);
 
     Items<Article> listArticlesBySearchQuery(String searchQuery, int offset, int limit);
+
+    Article viewArticle(Long idArticle, String requestUrl) throws RedirectToValidUrlException;
 }

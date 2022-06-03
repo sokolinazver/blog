@@ -4,6 +4,7 @@ import org.sokolprojext.blog.dao.SQLDAO;
 import org.sokolprojext.blog.entity.Article;
 import org.sokolprojext.blog.entity.Category;
 import org.sokolprojext.blog.exception.ApplicationException;
+import org.sokolprojext.blog.exception.RedirectToValidUrlException;
 import org.sokolprojext.blog.model.Items;
 import org.sokolprojext.blog.service.BusinessService;
 import org.w3c.dom.ls.LSOutput;
@@ -74,6 +75,26 @@ class BusinessServiceImpl implements BusinessService {
             return items;
         } catch (SQLException e) {
             throw new ApplicationException("Can't execute db command:" + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public Article viewArticle(Long idArticle, String requestUrl) throws RedirectToValidUrlException {
+        try (Connection c = dataSource.getConnection()) {
+            Article article = sql.findArticleById(c, idArticle);
+            if (article == null) {
+                return null;
+            }
+            if (!article.getArticleLink().equals(requestUrl)) {
+                throw new RedirectToValidUrlException(article.getArticleLink());
+            } else {
+                article.setViews(article.getViews() + 1);
+                sql.updateArticleViews(c, article);
+                c.commit();
+                return article;
+            }
+        } catch (SQLException e) {
+            throw new ApplicationException("Can't execute db command: " + e.getMessage(),e);
         }
     }
 }
