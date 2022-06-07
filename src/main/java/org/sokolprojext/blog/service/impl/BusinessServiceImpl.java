@@ -3,6 +3,7 @@ package org.sokolprojext.blog.service.impl;
 import org.sokolprojext.blog.dao.SQLDAO;
 import org.sokolprojext.blog.entity.Article;
 import org.sokolprojext.blog.entity.Category;
+import org.sokolprojext.blog.entity.Comment;
 import org.sokolprojext.blog.exception.ApplicationException;
 import org.sokolprojext.blog.exception.RedirectToValidUrlException;
 import org.sokolprojext.blog.model.Items;
@@ -12,6 +13,7 @@ import org.w3c.dom.ls.LSOutput;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 
 class BusinessServiceImpl implements BusinessService {
@@ -93,6 +95,15 @@ class BusinessServiceImpl implements BusinessService {
                 c.commit();
                 return article;
             }
+        } catch (SQLException e) {
+            throw new ApplicationException("Can't execute db command: " + e.getMessage(),e);
+        }
+    }
+
+    @Override
+    public List<Comment> listComments(long idArticle, int offset, int limit) {
+        try (Connection c = dataSource.getConnection()) {
+            return sql.listComments(c, idArticle, offset, limit);
         } catch (SQLException e) {
             throw new ApplicationException("Can't execute db command: " + e.getMessage(),e);
         }
